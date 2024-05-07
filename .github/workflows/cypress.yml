@@ -129,7 +129,7 @@ jobs:
       - run: npm install
       - uses: browser-actions/setup-edge@v1
       - name: Run Cypress tests
-        run: npx cypress run --browser edge  --spec "cypress/e2e/*.cy.tsś"
+        run: npx cypress run --browser edge  --spec "cypress/e2e/*.cy.ts"
       - name: Upload Cypress screenshots
         if: failure()
         uses: actions/upload-artifact@v3
