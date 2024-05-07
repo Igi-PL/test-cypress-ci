@@ -2,9 +2,10 @@
 
 
 import { getRandomUser } from "../generators/userGenerator"
+import { User } from "../types/user";
 
-let token;
-let user;
+let token: string | undefined;
+let user: User;
 
 describe('Edit tests', () => {
    beforeEach(() => {
@@ -12,7 +13,7 @@ describe('Edit tests', () => {
        cy.register(user)
        cy.login(user.username, user.password)
        cy.getCookie('token').then((cookie) => {
-         token = cookie.value
+         token = cookie?.value
        })
        // Kliknięcie edit na uzytkowniku
        cy.get('li').contains(`${user.firstName} ${user.lastName}`).find('.edit').click()

@@ -14,7 +14,7 @@ describe('Register tests in isolation', () => {
         const user = getRandomUser()
         registerMocks.mockSuccess()
 
-        registerPage.attenptRegister()
+        registerPage.attemptRegister(user)
 
         alerts.verifySuccess('Registration successful')
         cy.get('.alert').should('contain.text', 'Registration successful')
