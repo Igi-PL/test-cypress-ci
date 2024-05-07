@@ -1,7 +1,13 @@
+export const getFakeToken = () => {
+  return {
+    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVTlVOIiwiYXV0aCI6W3siYXV0aG9yaXR5IjoiUk9MRV9DTElFTlQifV0sImlhdCI6MTcxNTA3MjMyMCwiZXhwIjoxNzE1MDcyNjIwfQ.yYTsxpORqECsxf1SSNH2yV4zn34eM9qiEqJmbwew0tc'
+  }
+}
+
 export const getFakeLoginResponse = () => {
   return {
     ...getCommonFields(),
-    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTQ5OTQ3NDEsImV4cCI6MTcxNDk5NTA0MX0.qurVtYoxIxegwDgEvydp7O5WzBLdxi1Vky0tsmTnwx0'
+    ...getFakeToken()
   }
  
 }
