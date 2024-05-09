@@ -3,7 +3,6 @@
 import { getFakeLoginResponse } from "../../generators/userGenerator"
 import { getUsersMocks } from "../../mocks/getUsers"
 
-
 describe('Home tests in isolation', () => {
 
     beforeEach(() => {
@@ -19,6 +18,14 @@ describe('Home tests in isolation', () => {
 
         // then (asercje)
         cy.get('li').should('have.length.at.least', 1)
+    })
+
+    it('should display home page - fail demo', () => {
+        // when (testowana akcja)
+        cy.visit('http://localhost:8081')
+
+        // then (asercje)
+        cy.get('li').should('have.length', 1)
     })
 
 })
